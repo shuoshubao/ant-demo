@@ -3,20 +3,30 @@ import {render} from 'react-dom'
 import {Icon} from 'antd';
 
 class App extends React.Component {
-  state = {
-    size: 'default',
-  };
-
-  handleSizeChange = (e) => {
-    this.setState({ size: e.target.value });
-  }
-
   render() {
-    const size = this.state.size;
     return (
-      <div>
-        <Icon type="link" />
-      </div>
+      <ul>
+        <li>
+          <span>link</span>
+          <Icon type="link" />
+        </li>
+        <li>
+          <span>message</span>
+          <Icon type="message" />
+        </li>
+        <li>
+          <span>windows</span>
+          <Icon type="windows" />
+        </li>
+        <li>
+          <span>windows-o</span>
+          <Icon type="windows-o" />
+        </li>
+        <li>
+          <span>loading</span>
+          <Icon type="loading" spin="true" />
+        </li>
+      </ul>
     );
   }
 }
